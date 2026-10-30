@@ -73,19 +73,6 @@ for (var key of params.keys()){
   data[key] = params.get(key);
 }
 
-function setOptionalText(selector, value) {
-  var element = document.querySelector(selector);
-  if (element && value) {
-    element.textContent = value;
-  }
-}
-
-setOptionalText(".mdow_series_value", data["mdow_series"]);
-setOptionalText(".mdow_expiry_date_value", data["expiry_date"]);
-setOptionalText(".mdow_issue_date_value", data["issue_date"]);
-setOptionalText(".father_name_value", data["father_name"]);
-setOptionalText(".mother_name_value", data["mother_name"]);
-
 document.querySelector(".id_own_image").style.backgroundImage = `url(${data['image']})`;
 
 var birthday = data['birthday'];
